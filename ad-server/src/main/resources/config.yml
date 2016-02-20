@@ -1,0 +1,22 @@
+server:
+  applicationConnectors:
+  - type: http
+    port: 8080
+  adminConnectors:
+  - type: http
+    port: 8081
+
+logging:
+  level: DEBUG
+  appenders:
+    - type: console
+    - type: file
+      threshold: DEBUG
+      archive: false
+      currentLogFilename: /tmp/adserver.log
+      timeZone: Asia/Kolkata
+
+adConfig:
+  adContentLocation: /Users/deepak.barr/hackathon/hackathon/data/adcontent
+  adMetadataFile: /Users/deepak.barr/hackathon/hackathon/data/AdMetadata.data
+  adMetricsFile: /Users/deepak.barr/hackathon/hackathon/data/AdMetrics.data
