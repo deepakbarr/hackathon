@@ -3,4 +3,5 @@
 *.deb
 *.log
 .idea
-*/target/*
+ad-client/target/*
+ad-server/target/*
