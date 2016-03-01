@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity"
+    android:id="@+id/TuneBot">
+
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="30dp" />
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Top Billboard Tracks"
+        android:id="@+id/topTracksCheckBox"
+        android:checked="false"
+        android:layout_below="@+id/welcomeTextView"
+        android:layout_alignLeft="@+id/welcomeTextView"
+        android:layout_alignStart="@+id/welcomeTextView"
+        android:layout_marginTop="41dp" />
+
+    <!--<CheckBox-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Top Pop Tracks"-->
+        <!--android:id="@+id/popCheckBox"-->
+        <!--android:layout_below="@+id/electronicCheckBox"-->
+        <!--android:layout_alignRight="@+id/electronicCheckBox"-->
+        <!--android:layout_alignEnd="@+id/electronicCheckBox"-->
+        <!--android:layout_alignLeft="@+id/electronicCheckBox"-->
+        <!--android:layout_alignStart="@+id/electronicCheckBox"-->
+        <!--android:checked="false" />-->
+
+    <View
+        android:id="@+id/separator"
+        android:layout_width="fill_parent"
+        android:layout_height="2dp"
+        android:layout_below="@+id/topTracksCheckBox"
+        android:layout_marginTop="20dp"
+        android:background="#c0c0c0"/>
+
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download Automatically"
+        android:id="@+id/downloadCheckBox"
+        android:layout_below="@+id/separator"
+        android:layout_alignRight="@+id/topTracksCheckBox"
+        android:layout_alignEnd="@+id/topTracksCheckBox"
+        android:layout_alignLeft="@+id/topTracksCheckBox"
+        android:layout_alignStart="@+id/topTracksCheckBox"
+        android:checked="false"
+        android:layout_marginTop="20dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="OK"
+        android:id="@+id/okButton"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="40dp"
+        android:layout_below="@+id/downloadCheckBox"
+        android:onClick="okMethod"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Download Now"
+        android:id="@+id/downloadButton"
+        android:layout_alignTop="@+id/okButton"
+        android:layout_toRightOf="@+id/okButton"
+        android:layout_marginLeft="16dp"
+        android:onClick="downloadMethod"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reset"
+        android:id="@+id/resetButton"
+        android:layout_alignTop="@+id/downloadButton"
+        android:layout_toRightOf="@+id/downloadButton"
+        android:layout_marginLeft="16dp"
+        android:onClick="resetMethod"/>
+
+</RelativeLayout>
